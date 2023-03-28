@@ -7,6 +7,8 @@
         <span>{{ value2 }}</span>
         <p>Result</p>
         <span>{{ formatNumber(calculateResult) }}</span>
+        <br>
+        <button @click="changeNumbers">Change numbers</button>
     </div>
 </template>
 <script>
@@ -25,6 +27,11 @@ export default {
     methods : {
         formatNumber(number){
             return Number(number).toLocaleString();
+        },
+
+        changeNumbers(){
+            this.value1 = 5;
+            this. value2 = 6;
         }
     }
 
@@ -36,6 +43,10 @@ export default {
     div {
         background-color:lightcyan;
         padding: 10px;
+    }
+
+    button {
+        margin: 10px 0;
     }
 
 </style>
