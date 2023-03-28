@@ -3,8 +3,12 @@
         <h2>Iteration 2</h2>
         <p>Value:</p>
         <span>{{ value1 }}</span>
+        <br>
+        <input type="number" v-model="value1">
         <p>Value:</p>
         <span>{{ value2 }}</span>
+        <br>
+        <input type="number" v-model="value2">
         <p>Result</p>
         <span>{{ formatNumber(calculateResult) }}</span>
         <br>
@@ -15,8 +19,8 @@
 export default {
     data(){
         return{
-            value1: 1,
-            value2: 2,
+            value1: 0,
+            value2: 0,
         }
     },
     computed: {
@@ -30,8 +34,8 @@ export default {
         },
 
         changeNumbers(){
-            this.value1 = 5;
-            this. value2 = 6;
+            this.value1 = Math.floor( Math.random() * 10);
+            this. value2 = Math.floor( Math.random() * 10);
         }
     }
 
@@ -46,6 +50,10 @@ export default {
     }
 
     button {
+        margin: 10px 0;
+    }
+
+    input {
         margin: 10px 0;
     }
 
