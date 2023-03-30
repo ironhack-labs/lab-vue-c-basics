@@ -1,23 +1,26 @@
 <template>
     <section>
         <div>
-            <p>Welcome back <span>{{ myName.name }}</span>!</p>
-            <p class="counterBox">Keep the habit: <span>{{ myName.interest[4] }}</span></p>
+            <h3>Welcome back <span>{{ myName.name }}</span>!</h3>
+            <div>    
+                <button class="button" @click="toggleElement">Show habits: {{ myName.interest[4] }}</button>
+                <button class="button" @click="openProject">Custom hide</button>
+            </div>
         </div>
         <div div__ProfileInfoContainer>
-            <div class="div__Profile backgrnd--green">
+            <div v-if="elementToToggle" class="div__Profile backgrnd--green">
                 <h3>Your habit stack</h3>
                 <div class="div__Panel--white">
                     <ul>
-                        <li v-for="items in myName.courses">{{ items.course }}</li>
+                        <li v-for="items in myName.courses" :key="items.course">{{ items.course }}</li>
                     </ul>
                 </div>
             </div>
             <div class="div__Profile backgrnd--blue">
-                <h3>{{ "Total hours" + }} </h3>
+                <h3>{{"Total hours" + " " + su}} </h3>
                 <div class="div__Panel--white">
                     <ul>
-                        <li v-for="items in myName.courses">{{ items.hours }}</li>
+                        <li v-for="items in myName.courses" :key="items.course">{{ items.hours }}</li>
                     </ul>
                 </div>
             </div>
@@ -25,8 +28,11 @@
     </section>
 </template>
 
+
+
+
 <script setup>
-import { reactive } from 'vue';
+import { reactive , defineEmits, ref} from 'vue';
 
 const myName = reactive({
     name: 'Yasser',
@@ -45,31 +51,51 @@ const myName = reactive({
         { course: 'Vue.js', hours: 7 }
     ]
 })
-/* const totalHours = () => {
-    let count = 0
-    myName.courses.forEach(element => {
-        count += element.course
-    });
-    console.log(count)
-    return count
-} 
+
+const elementToToggle = ref(false)
+
+function toggleElement() {
+    elementToToggle.value = !elementToToggle.value
+}
+
+
+const emit = defineEmits(['open-project'])
+
+const openProject = () => {
+    emit('open-project')
+    console.log('Envio de evento')
+}
+
 
 </script>
 
 
+
 <style scoped>
+.button {
+    border: none;
+    border-radius: 15px;
+    padding: 0px 5px;
+    background-color: #41B883;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    margin: 5px;
+}
 span {
     font-weight: 600;
+    font-size: 18px;
 }
 
 section {
     padding: 40px 70px;
-    height: max-content;
+    height: 400px;
 }
 
 div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .counterBox {

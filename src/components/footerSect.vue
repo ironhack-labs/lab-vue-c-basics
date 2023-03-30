@@ -20,7 +20,7 @@ const siteLogo = "/src/assets/logo.svg"
         align-items: center;
         justify-content: center;
         padding: 20px 5%;
-        background-color: #010f1a;
+
     }
     img {
         width: 70px;
