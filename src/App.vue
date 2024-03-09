@@ -4,22 +4,20 @@ import Navbar from "@/components/Navbar.vue"
 import Footer from "@/components/Footer.vue"
 
 // reactive state
-const count = ref(0)
+const greeting = ref("Hello, ")
+const name = "My Name is Foo"
 
-// functions that mutate state and trigger updates
-function increment() {
-  count.value++
+
+function greet() {
+  return `${greeting.value + name}`
 }
 
-// lifecycle hooks
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
-})
 </script>
 
 <template>
   <Navbar />
-  <button @click="increment">Count is: {{ count }}</button>
+  <h1>{{ greet() }}</h1><br>
+  <p>This is the mathematical operation 2 + 2 = {{ 2 + 2 }}</p>
   <Footer />
 </template>
 <style scoped>
