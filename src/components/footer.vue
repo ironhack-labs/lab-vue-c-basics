@@ -15,11 +15,12 @@
 
 .footer-container {
     height: 38px;
-    margin: 0 auto;
+   margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 25px;
+    border: 1px solid red;
 }
 
 .footer {
@@ -30,6 +31,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  border: 1px solid blueviolet;
 }
 h4{
     margin: 0;

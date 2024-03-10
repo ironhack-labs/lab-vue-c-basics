@@ -14,26 +14,23 @@
 <style scope>
 
 .header-container {
-    height: 38px;
-    margin: 0 auto;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
+    border: 1px solid green;
 }
 
 .logo-container,
 .logo-container img {
     width: 35px;
     height: 38px;
-    margin: 20px;
 }
 
 .menu-container,
 .menu-container img {
     width: 22px;
     height: 20px;
-    margin: 20px;
-
 }
 </style>

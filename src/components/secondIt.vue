@@ -11,11 +11,19 @@ function _getString(){
 
 <template>
 
-<h1> {{ sum }}</h1>
-<button @click="_getString">Get String</button>
+    <section id="secondIt">
+        <h1> {{ sum }}</h1>
+        <button @click="_getString">Get Number</button>
+    </section>
+
 
 </template>
 
 <style scope>
+
+#secondIt {
+    padding: 20px;
+    border: 1px solid brown;
+}
 
 </style>
