@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar.vue"
 import Footer from "@/components/Footer.vue"
 import Conditional from "@/components/Conditional.vue"
 import Posts from "@/components/Posts.vue"
+import BackgroundChangeButton from '@/components/BackgroundChangeButton.vue'
 
 // reactive state
 const greeting = ref("Hello, ")
@@ -24,8 +25,7 @@ function changeNavbarBackgroundColor(){
 
 <template>
   <Navbar :background-color=backgroundColor />
-  <button @click="changeNavbarBackgroundColor">Click me</button>
-  <BackgroundChangeButton />
+  <BackgroundChangeButton @click="changeNavbarBackgroundColor"/>
   <h1>{{ greet() }}</h1><br>
   <p>This is the mathematical operation 2 + 2 = {{ 2 + 2 }}</p>
   <Conditional />
