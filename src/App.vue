@@ -25,7 +25,7 @@ function changeNavbarBackgroundColor(){
 
 <template>
   <Navbar :background-color=backgroundColor />
-  <BackgroundChangeButton @click="changeNavbarBackgroundColor"/>
+  <BackgroundChangeButton @change-color="changeNavbarBackgroundColor"/>
   <h1>{{ greet() }}</h1><br>
   <p>This is the mathematical operation 2 + 2 = {{ 2 + 2 }}</p>
   <Conditional />
