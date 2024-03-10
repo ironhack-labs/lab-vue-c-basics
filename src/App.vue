@@ -1,47 +1,34 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue'
+import Navbar from "@/components/Navbar.vue"
+import Footer from "@/components/Footer.vue"
+import Conditional from "@/components/Conditional.vue"
+import Posts from "@/components/Posts.vue"
+import BackgroundChangeButton from '@/components/BackgroundChangeButton.vue'
+
+// reactive state
+const greeting = ref("Hello, ")
+const name = "My Name is Foo"
+const backgroundColor = ref("green")
+
+
+function greet() {
+  return `${greeting.value + name}`
+}
+
+function changeNavbarBackgroundColor(){
+  let randomColor = Math.floor(Math.random()*16777215).toString(16)
+  backgroundColor.value = "#" + randomColor
+}
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <Navbar :background-color=backgroundColor />
+  <BackgroundChangeButton @change-color="changeNavbarBackgroundColor"/>
+  <h1>{{ greet() }}</h1><br>
+  <p>This is the mathematical operation 2 + 2 = {{ 2 + 2 }}</p>
+  <Conditional />
+  <Posts />
+  <Footer />
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
