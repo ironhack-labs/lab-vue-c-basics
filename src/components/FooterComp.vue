@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <footer>
         <p>Copyright: AubaHack</p>
@@ -9,7 +5,3 @@
     </footer>
 
 </template>
-
-<style scoped>
-
-</style>

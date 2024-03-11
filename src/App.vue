@@ -1,33 +1,15 @@
 <script setup>
     import NavbarComp from "@/components/NavbarComp.vue";
     import FooterComp from "@/components/FooterComp.vue";
-    import { reactive } from 'vue' 
-
-    const objVoleiTeam = reactive({
-      name: 'DSB',
-      category: '3',
-      players: [
-        'p1',
-        'p2',
-        'p3',
-        'p4',
-        'p5',
-        'p6'
-      ],
-      winner: true
-    })
-
-    function getNumberOfPlayers(objTeam) {
-      return `The number of players of your team is ${objTeam.players.length}`
-    }
-
+    import TextsOperationsComp from "@/components/TextsOperationsComp.vue";
+    import ListOfPostsComp from "@/components/ListOfPostsComp.vue";
 </script>
 
 <template>
-  <NavbarComp/>
-  <p>The resulting operation for iteration 2.1 is: {{ 2+2 }}</p>
-  <p>The resulting operation for iteration 2.2 is: {{ getNumberOfPlayers(objVoleiTeam) }}</p>
-  <FooterComp/>
+  <NavbarComp/> <!-- Iteration 1 & 3 -->
+  <TextsOperationsComp/> <!-- Iteration 2 -->
+  <ListOfPostsComp/> <!-- Iteration 4 -->
+  <FooterComp/> <!-- Iteration 1 -->
 </template>
 
 <style scoped>
