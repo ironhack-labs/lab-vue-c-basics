@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <footer class="footer">
         <section class="footer-container">
@@ -23,12 +19,10 @@
     border: 1px solid red;
 }
 
-.footer {
-    
-    background-color: #333;
+.footer { 
+  background-color: #333;
   color: #fff;
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
   border: 1px solid blueviolet;
