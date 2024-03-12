@@ -24,7 +24,7 @@ import { ref } from 'vue';
 
 #thirdIt {
     padding: 20px;
-    border: 1px solid lightsalmon;
+ /* border: 1px solid lightsalmon;*/
 }
 
 </style>

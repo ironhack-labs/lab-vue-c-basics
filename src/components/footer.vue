@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 25px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .footer { 
@@ -25,7 +25,7 @@
   text-align: center;
   bottom: 0;
   width: 100%;
-  border: 1px solid blueviolet;
+ /* border: 1px solid blueviolet;*/
 }
 h4{
     margin: 0;

@@ -40,7 +40,7 @@ const movies = ref([
 
 #fourthdIt {
     padding: 20px;
-    border: 1px solid orange;
+ /*   border: 1px solid orange;*/
 }
 
 .movie {

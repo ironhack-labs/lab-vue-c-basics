@@ -23,7 +23,7 @@ function _getString(){
 
 #secondIt {
     padding: 20px;
-    border: 1px solid brown;
+ /*   border: 1px solid brown;*/
 }
 
 </style>

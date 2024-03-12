@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
-    border: 1px solid green;
+   /* border: 1px solid green;*/
 }
 
 .logo-container,
