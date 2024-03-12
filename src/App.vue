@@ -1,12 +1,26 @@
 <script setup>
 import Navbar from "./components/navbar.vue"
 import TheFooter from "./components/footer.vue"
+
+import { reactive } from 'vue'
+
+const numbers = reactive({
+  a: 2,
+  b: 2
+});
+
+function suma() {
+  return numbers.a + numbers.b;
+}
+
 </script>
 
 <template>
   <Navbar />
   <main>
-    <TheWelcome />
+    <div>
+      Result: {{ suma() }}
+    </div>
   </main>
   <TheFooter />
 </template>
