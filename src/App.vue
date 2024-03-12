@@ -1,47 +1,41 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import navbarVue from "./components/navbar.vue";
+import secondItVue from "./components/secondIt.vue";
+import thirdItVue from "./components/thirdIt.vue";
+import fourthItVue from "./components/fourthIt.vue";
+import bonusItVue from "./components/bonus.vue";
+import footerVue from "./components/footer.vue";
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+<!-- {%NAVBAR SECTION} -->
 
-  <main>
-    <TheWelcome />
-  </main>
+<navbarVue/>
+
+<!-- {%SECOND ITERATION SECTION} -->
+
+<secondItVue/>
+
+<!-- {%THIRD ITERATION SECTION} -->
+
+<thirdItVue/>
+
+<!-- {%FOURTH ITERATION SECTION} -->
+
+<fourthItVue/>
+
+<!-- {%BONUS SECTION} -->
+
+<bonusItVue/>
+
+<!-- {%FOOTER SECTION} -->
+
+<footerVue/>
+ 
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
