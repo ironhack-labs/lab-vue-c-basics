@@ -1,7 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
-
-// const props = defineProps({})
+import { reactive } from 'vue'
 
 const posts = reactive([
   {
