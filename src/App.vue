@@ -7,6 +7,7 @@
     <!-- Mostrar el resultado de una operación matemática -->
     <div>
       Resultado de 2 + 2: {{ 2 + 2 }}
+      
     </div>
 
     <!-- Llamar a la función generateString() -->
