@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <p>Este es el pie de página</p>
+      <p>Pokemón</p>
     </footer>
   </template>
   
@@ -11,5 +11,10 @@
   </script>
   
   <style scoped>
-  
+  footer {
+  background-color: #fc7f60;
+  color: #7e7676;
+  padding: 50px;
+  text-align: center;
+}
   </style>
