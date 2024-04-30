@@ -1,6 +1,8 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import IterationThree from './components/IterationThree.vue'
+import IterationFour from './components/IterationFour.vue'
 </script>
 
 <template>
@@ -9,8 +11,11 @@ import Footer from './components/Footer.vue'
   </header>
 
   <main>
-    <Footer />
+    <IterationThree />
+    <IterationFour />
   </main>
+
+   <Footer />
 </template>
 
 <style scoped>
