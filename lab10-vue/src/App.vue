@@ -1,12 +1,12 @@
 <script setup>
-import Header from './components/Header.vue'
+import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
 import Main from './components/Main.vue'
 </script>
 
 <template>
   <section>
-    <Header></Header>
+    <Nav></Nav>
     <Main></Main>
     <Footer></Footer>
   </section>

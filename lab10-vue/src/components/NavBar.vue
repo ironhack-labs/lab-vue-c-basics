@@ -3,7 +3,7 @@ const navBarElements = ['Home', 'About', 'Contact']
 </script>
 
 <template>
-  <section class="header">
+  <section class="section">
     <nav>
       <ul class="navbar">
         <li v-for="element in navBarElements" :key="element">{{ element }}</li>
@@ -13,7 +13,7 @@ const navBarElements = ['Home', 'About', 'Contact']
 </template>
 
 <style scoped>
-.header {
+.section {
   position: relative;
   max-width: 100%;
   padding: 10px;

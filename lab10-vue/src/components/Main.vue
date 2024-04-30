@@ -10,6 +10,11 @@ const person = ref({
   age: 20,
   country: 'Uruguay'
 })
+
+function showFullName() {
+  return person.value.name + ' Chiola'
+}
+
 const showPerson = ref(false)
 
 const posts = reactive([
@@ -44,8 +49,8 @@ const posts = reactive([
 
 const isColorChanged = ref(false)
 
-function toggleColor(){
-    isColorChanged.value = !isColorChanged.value
+function toggleColor() {
+  isColorChanged.value = !isColorChanged.value
 }
 function sum() {
   result.value = number1.value + number2.value
@@ -67,7 +72,8 @@ function toggleShow() {
       <br />
       <button @click="() => sum()">Submit</button>
       <p>The result of the sum is: {{ result }}</p>
-
+      <br />
+      <p>Sum :{{ 2 + 2 }}</p>
       <br />
     </div>
 
@@ -77,9 +83,10 @@ function toggleShow() {
       <p v-if="showPerson">
         I am {{ person.name }} , I have {{ person.age }} and I'm from {{ person.country }}
       </p>
+      <p v-if="showPerson">FullName : {{ showFullName() }} </p>
     </div>
 
-    <div :class="{ 'changeColor': isColorChanged }">
+    <div :class="{ changeColor: isColorChanged }">
       <h3>Series:</h3>
       <ul>
         <li v-for="post in posts" :key="post">
@@ -90,8 +97,8 @@ function toggleShow() {
       </ul>
     </div>
     <div>
-        <h3>Bonus</h3>
-        <button @click="toggleColor">Change color</button>
+      <h3>Bonus</h3>
+      <button @click="toggleColor">Change color</button>
     </div>
   </section>
 </template>
@@ -101,8 +108,8 @@ function toggleShow() {
   background-color: rgb(246, 246, 246);
 }
 
-.changeColor{
-    background-color: antiquewhite;
-    color:blue;
+.changeColor {
+  background-color: antiquewhite;
+  color: blue;
 }
 </style>
