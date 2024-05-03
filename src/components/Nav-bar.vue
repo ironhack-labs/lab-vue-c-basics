@@ -15,6 +15,17 @@ const posts = ref([
     { title: 'Titulo 3', description: 'Descripción 3', content: 'Contenido 3' }
 ]);
 
+const hasBlueBackground = ref(false);
+const toggleBackgroundColor = () => {
+    hasBlueBackground.value = !hasBlueBackground.value;
+}
+
+const modifyColor = ref(false);
+function changeColor() {
+    modifyColor.value = !modifyColor.value;
+
+}
+
 </script>
 
 <template>
@@ -31,12 +42,17 @@ const posts = ref([
         <p v-else>Estoy feliz, ya he comido!</p>
 
         <ul class="post">
-            <li v-for="post in posts" :key="post.title">
+            <li v-for="post in posts" :key="post">
                 {{ post.title }} <br>
                 {{ post.description }} <br>
                 {{ post.content }}<br><br>
             </li>
         </ul>
+        <div :class="{ 'blue-background': hasBlueBackground }">
+            Este div cambiará de color.
+        </div>
+        <button @click="toggleBackgroundColor">Cambiar Color</button>
+        <button :class="modifyColor ? 'btn-color' : ''" @click="changeColor">Click me</button>
     </section>
 </template>
 
@@ -53,6 +69,8 @@ section ul {
     overflow: hidden;
     display: flex;
     gap: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 ul a {
@@ -74,5 +92,13 @@ p {
 
 ul li {
     margin: 10px
+}
+
+.blue-background {
+    background-color: lightblue;
+}
+
+.btn-color {
+    background-color: red;
 }
 </style>

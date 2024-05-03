@@ -8,11 +8,7 @@ import Footer from './components/Footer-section.vue'
 
 <template>
     <Navbar></Navbar>
-    
-
     <Footer></Footer>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
