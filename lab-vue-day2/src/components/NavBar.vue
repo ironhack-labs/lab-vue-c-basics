@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 
+
 const author = reactive({
   name: 'John Doe',
   books: ['Vue 2 - Advanced Guide', 'Vue 3 - Basic Guide', 'Vue 4 - The Mystery']
@@ -9,6 +10,14 @@ const author = reactive({
 function show() {
   return author.name + ' Cassini'
 }
+
+const originalColor = ref(true);
+
+
+function changeColor(){
+  originalColor.value = !originalColor.value;
+}
+
 
 const isShown = ref(false)
 
@@ -32,7 +41,11 @@ const cityList = ref([
     img: 'https://a.cdn-hotels.com/gdcs/production196/d1429/5c2581f0-c31d-11e8-87bb-0242ac11000d.jpg?impolicy=fcrop&w=800&h=533&q=medium'
   }
 ])
+
 </script>
+
+
+
 
 <template>
   <h1>Soy el NavBar</h1>
@@ -51,6 +64,26 @@ const cityList = ref([
       <img :src="city.img" alt="" />
     </li>
   </ul>
+
+
+  <button :class="originalColor ? '' : 'buttonColor' " @click="changeColor">Click</button>
 </template>
 
-<style scoped></style>
+
+
+
+
+
+
+<style scoped>
+
+
+.buttonColor {
+  background-color: red;
+  color: white;
+}
+
+
+
+
+</style>
