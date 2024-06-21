@@ -25,9 +25,7 @@ Let's begin!
 - Open the LAB and start:
 
   ```bash
-  $ cd lab-vue-basics
-  $ npm install
-  $ npm run dev
+  $ cd lab-vue-c-basics
   ```
 
 
