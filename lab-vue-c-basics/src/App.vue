@@ -1,23 +1,29 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import NavBar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
+import Iteration2 from "./components/Iteration2.vue";
+import Iteration3 from "./components/Iteration3.vue";
+import Iteration4 from "./components/Iteration4.vue";
+import Iteration5 from "./components/Iteration5.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <NavBar />
+  <Iteration2 />
+  <hr />
+  <Iteration3 />
+  <hr />
+  <Iteration4 />
+  <hr />
+  <Iteration5 />
+  <Footer />
 </template>
 
 <style scoped>
+hr {
+  margin: 1rem 0;
+}
+
 header {
   line-height: 1.5;
 }
