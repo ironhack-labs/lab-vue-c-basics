@@ -1,0 +1,45 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+nav, footer {
+  transition: background-color 0.5s ease;
+}
+
+.bg-changed {
+  background-color: #1abc9c; /* Verde brillante */
+}
