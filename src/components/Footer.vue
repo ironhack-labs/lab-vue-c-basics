@@ -25,10 +25,9 @@
     height: auto;
     padding: 10px 30px;
     background-color: var(--light-blue);
-    
     bottom: 0;
     left: 0;
-    position: absolute;
+    margin-bottom: 0;
 
     .footer-links {
         width: 100%;
