@@ -1,0 +1,25 @@
+@import './base.css';
+
+:root {
+  --light-blue: #7fcbd7;
+  --blue: #2b3595;;
+  --purple: #857ebb;
+  --mauve: #ca9dd7; 
+  --pink: #facbd3;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 391px;
+}
+
+body {
+  width: 100%;
+}
