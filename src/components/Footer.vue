@@ -27,7 +27,7 @@
     background-color: var(--light-blue);
     bottom: 0;
     left: 0;
-    margin-bottom: 0;
+    margin: 30px 0 0;
 
     .footer-links {
         width: 100%;
