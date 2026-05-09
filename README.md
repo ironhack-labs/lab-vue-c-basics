@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+# Vue 3 + Vite
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+=======
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # LAB | Vue.js Basics (Composition API)
@@ -102,3 +109,4 @@ Sounds good? Let's get started!
 <br>
 
 Happy coding! :heart:
+>>>>>>> 58e2e68e3570f009614c05f716db6915725de11f
