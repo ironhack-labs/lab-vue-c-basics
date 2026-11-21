@@ -7,7 +7,6 @@ function toggleFrogMode() {
   isFrogMode.value = !isFrogMode.value
 }
 
-// Partie 2 : liste de couleurs avec :style
 const villages = [
   { nom: 'Konoha (Feuille)', color: '#27ae60' },
   { nom: 'Suna (Sable)', color: '#e1b12c' },
