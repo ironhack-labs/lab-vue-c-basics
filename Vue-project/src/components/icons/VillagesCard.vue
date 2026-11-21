@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Partie 1 : bascule avec une classe
 const isFrogMode = ref(false)
 
 function toggleFrogMode() {
@@ -24,7 +23,6 @@ function nextVillage() {
 </script>
 
 <template>
-  <!-- Partie 1 : :class -->
   <div class="card" :class="{ frog: isFrogMode }">
     <h2>Naruto Uzumaki</h2>
     <p>{{ isFrogMode ? 'Mode Grenouille activé ! 🐸' : 'Ninja de Konoha' }}</p>
@@ -33,7 +31,6 @@ function nextVillage() {
     </button>
   </div>
 
-  <!-- Partie 2 : :style -->
   <div class="card" :style="{ backgroundColor: villages[index].color }">
     <h2>{{ villages[index].nom }}</h2>
     <button @click="nextVillage">Village caché suivant</button>
@@ -42,7 +39,7 @@ function nextVillage() {
 
 <style scoped>
 .card {
-  background-color: #f5a623; /* orange Naruto */
+  background-color: #f5a623;
   padding: 20px;
   margin: 16px;
   border-radius: 8px;
@@ -50,7 +47,7 @@ function nextVillage() {
   transition: background-color 0.3s;
 }
 
-.card.sage {
-  background-color: #d35400; /* orange sage, plus foncé */
+.card.frog {
+  background-color: #d35400;
 }
 </style>
