@@ -23,7 +23,7 @@ const posts = ref([
   {
     id: 4,
     title: 'Kakashi Hatake',
-    description: 'Le professeur de l\'équipe 7.',
+    description: 'Le sensei de l\'équipe 7.',
     content: 'Kakashi est surnommé le ninja copieur grâce à son Sharingan.'
   }
 ])
